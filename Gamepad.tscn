@@ -1,0 +1,124 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://PS4_Keys/Skin_Gamepad.png" type="Texture" id=1]
+[ext_resource path="res://PS4_Keys/K_Cross.png" type="Texture" id=2]
+[ext_resource path="res://PS4_Keys/K_Circle.png" type="Texture" id=3]
+[ext_resource path="res://PS4_Keys/K_Triangle.png" type="Texture" id=4]
+[ext_resource path="res://PS4_Keys/K_Square.png" type="Texture" id=5]
+[ext_resource path="res://Gamepad.gd" type="Script" id=6]
+[ext_resource path="res://PS4_Keys/K_R1.png" type="Texture" id=7]
+[ext_resource path="res://PS4_Keys/K_L2.png" type="Texture" id=8]
+[ext_resource path="res://PS4_Keys/K_R2.png" type="Texture" id=9]
+[ext_resource path="res://PS4_Keys/K_L1.png" type="Texture" id=10]
+[ext_resource path="res://PS4_Keys/K_Right.png" type="Texture" id=11]
+[ext_resource path="res://PS4_Keys/Key_Up.png" type="Texture" id=12]
+[ext_resource path="res://PS4_Keys/K_Down.png" type="Texture" id=13]
+[ext_resource path="res://PS4_Keys/K_Left.png" type="Texture" id=14]
+[ext_resource path="res://PS4_Keys/K_Options.png" type="Texture" id=15]
+[ext_resource path="res://PS4_Keys/K_Share.png" type="Texture" id=16]
+[ext_resource path="res://PS4_Keys/Axis_Right.png" type="Texture" id=17]
+[ext_resource path="res://PS4_Keys/Axis_Left.png" type="Texture" id=18]
+
+[node name="Gamepad" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skin_Gamepad" type="Sprite" parent="."]
+position = Vector2( 128, 80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Axis_Left" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 41, 41 )
+texture = ExtResource( 18 )
+
+[node name="Axis_Right" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 81, 41 )
+texture = ExtResource( 17 )
+
+[node name="K_Cross" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 95, 27 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="K_Circle" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 103, 19 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="K_Square" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 87, 19 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="K_Triangle" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 95, 10.5 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="K_L1" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 24, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="K_L2" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 24, -11 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="K_R1" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 96, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="K_R2" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 96, -11 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="K_Up" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 23, 15.5 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="K_Down" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 23, 30.5 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="K_Left" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 15.5, 23 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="K_Right" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 30.5, 23 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="K_Share" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 37, 9.5 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="K_Options" type="Sprite" parent="Skin_Gamepad"]
+position = Vector2( 85, 9.5 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 15 )
+
+[node name="Quit_Button" type="Button" parent="."]
+margin_left = 240.0
+margin_top = 148.0
+margin_right = 264.0
+margin_bottom = 168.0
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Quit_Button" to="." method="_on_quit_button_pressed"]

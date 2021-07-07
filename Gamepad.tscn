@@ -28,7 +28,7 @@ __meta__ = {
 }
 
 [node name="Skin_Gamepad" type="Sprite" parent="."]
-position = Vector2( 128, 80 )
+position = Vector2( 8, 40 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 centered = false
@@ -112,10 +112,10 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 15 )
 
 [node name="Quit_Button" type="Button" parent="."]
-margin_left = 240.0
-margin_top = 148.0
-margin_right = 264.0
-margin_bottom = 168.0
+margin_left = 480.0
+margin_top = 8.0
+margin_right = 504.0
+margin_bottom = 28.0
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false

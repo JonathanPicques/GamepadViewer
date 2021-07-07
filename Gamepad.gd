@@ -1,6 +1,7 @@
 extends Control
 
-const AXIS_OFFSET := 3.0
+const AXIS_DEADZONE := 0.13
+const AXIS_MAGNITUDE := 7.0
 const WINDOW_DRAG_STATUS_NONE := 0
 const WINDOW_DRAG_STATUS_PRESSED := 1
 const WINDOW_DRAG_STATUS_PRESSED_AND_MOVED := 2
@@ -37,8 +38,8 @@ func _input(event: InputEvent):
 	$Skin_Gamepad/K_Left.visible = Input.is_action_pressed("ps_dpad_left")
 	$Skin_Gamepad/K_Right.visible = Input.is_action_pressed("ps_dpad_right")
 	# valeur des axes
-	$Skin_Gamepad/Axis_Left.offset = AXIS_OFFSET * Vector2(Input.get_joy_axis(0, JOY_ANALOG_LX), Input.get_joy_axis(0, JOY_ANALOG_LY))
-	$Skin_Gamepad/Axis_Right.offset = AXIS_OFFSET * Vector2(Input.get_joy_axis(0, JOY_ANALOG_RX), Input.get_joy_axis(0, JOY_ANALOG_RY))
+	$Skin_Gamepad/Axis_Left.offset = AXIS_MAGNITUDE * Vector2(_get_joy_axis_value(JOY_ANALOG_LX), _get_joy_axis_value(JOY_ANALOG_LY))
+	$Skin_Gamepad/Axis_Right.offset = AXIS_MAGNITUDE * Vector2(_get_joy_axis_value(JOY_ANALOG_RX), _get_joy_axis_value(JOY_ANALOG_RY))
 	# bouger la fenêtre avec la souris
 	if event.is_class("InputEventMouse"):
 		if _window_drag_status == WINDOW_DRAG_STATUS_NONE and event.is_class("InputEventMouseButton") and event.button_index == BUTTON_LEFT and event.pressed:
@@ -54,6 +55,13 @@ func _input(event: InputEvent):
 func _process(_delta: float):
 	if _window_drag_status == WINDOW_DRAG_STATUS_PRESSED_AND_MOVED:
 		OS.window_position = (get_viewport().get_mouse_position() + OS.window_position) + _window_drag_offset
+
+# _get_joy_axis retourne la valeur de l'axe demandé
+func _get_joy_axis_value(axis: int) -> float:
+	var axis_value := Input.get_joy_axis(0, axis)
+	if abs(axis_value) < AXIS_DEADZONE:
+		return 0.0
+	return axis_value
 
 # on quitte l'app si on clique sur la croix
 func _on_quit_button_pressed():

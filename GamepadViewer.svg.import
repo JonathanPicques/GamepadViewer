@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/K_L2.png-b76a4a1e3134db0825733a98244b7c7f.stex"
+path="res://.import/GamepadViewer.svg-c5650a47b7a83ff334a0a50937b2ca62.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PS4_Keys/K_L2.png"
-dest_files=[ "res://.import/K_L2.png-b76a4a1e3134db0825733a98244b7c7f.stex" ]
+source_file="res://GamepadViewer.svg"
+dest_files=[ "res://.import/GamepadViewer.svg-c5650a47b7a83ff334a0a50937b2ca62.stex" ]
 
 [params]
 

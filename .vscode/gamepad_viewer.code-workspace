@@ -1,0 +1,15 @@
+{
+  "folders": [
+    {
+      "path": "../"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      ".import": true,
+    },
+    // Editor
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Godot Adaptive"
+  }
+}

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Key_Up.png-deb76702d2ae02bb0253a6bcb0a5ad4e.stex"
+path="res://.import/Axis_Left.png-0dd12ece91de172a6b7d8b2922a8f0d3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PS4_Keys/Key_Up.png"
-dest_files=[ "res://.import/Key_Up.png-deb76702d2ae02bb0253a6bcb0a5ad4e.stex" ]
+source_file="res://Gamepads/PS4/Keys/Axis_Left.png"
+dest_files=[ "res://.import/Axis_Left.png-0dd12ece91de172a6b7d8b2922a8f0d3.stex" ]
 
 [params]
 

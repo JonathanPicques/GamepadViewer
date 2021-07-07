@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/K_R2.png-222b324e6190e0bef6c9a42b763dad52.stex"
+path="res://.import/Button_Square.png-5718cf42f0be59c21c396b76ae4838a7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PS4_Keys/K_R2.png"
-dest_files=[ "res://.import/K_R2.png-222b324e6190e0bef6c9a42b763dad52.stex" ]
+source_file="res://Gamepads/PS4/Keys/Button_Square.png"
+dest_files=[ "res://.import/Button_Square.png-5718cf42f0be59c21c396b76ae4838a7.stex" ]
 
 [params]
 

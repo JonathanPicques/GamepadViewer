@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/K_Cross.png-7b7353b9284825c5c3170fdec9a6f761.stex"
+path="res://.import/Dpad_Down.png-cb98619e3a6bc10119a41ddfa8145f36.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PS4_Keys/K_Cross.png"
-dest_files=[ "res://.import/K_Cross.png-7b7353b9284825c5c3170fdec9a6f761.stex" ]
+source_file="res://Gamepads/PS4/Keys/Dpad_Down.png"
+dest_files=[ "res://.import/Dpad_Down.png-cb98619e3a6bc10119a41ddfa8145f36.stex" ]
 
 [params]
 

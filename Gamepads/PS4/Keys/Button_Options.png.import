@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/K_Share.png-c509f0e05af86e67776f93733a66c2fa.stex"
+path="res://.import/Button_Options.png-12eeac99799ede1db84a07c74d3b08a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PS4_Keys/K_Share.png"
-dest_files=[ "res://.import/K_Share.png-c509f0e05af86e67776f93733a66c2fa.stex" ]
+source_file="res://Gamepads/PS4/Keys/Button_Options.png"
+dest_files=[ "res://.import/Button_Options.png-12eeac99799ede1db84a07c74d3b08a9.stex" ]
 
 [params]
 

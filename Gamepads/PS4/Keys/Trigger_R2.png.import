@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/K_Circle.png-ea9ff98426ae7748da4618fdba3d2de6.stex"
+path="res://.import/Trigger_R2.png-5f06fb8df2da1de1354c99248d97ed93.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PS4_Keys/K_Circle.png"
-dest_files=[ "res://.import/K_Circle.png-ea9ff98426ae7748da4618fdba3d2de6.stex" ]
+source_file="res://Gamepads/PS4/Keys/Trigger_R2.png"
+dest_files=[ "res://.import/Trigger_R2.png-5f06fb8df2da1de1354c99248d97ed93.stex" ]
 
 [params]
 

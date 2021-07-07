@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/K_Right.png-a2abbcc26cffe8d343186d0805d1defc.stex"
+path="res://.import/Dpad_Up.png-04215eb0783b7c72629e66e23e015a7e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PS4_Keys/K_Right.png"
-dest_files=[ "res://.import/K_Right.png-a2abbcc26cffe8d343186d0805d1defc.stex" ]
+source_file="res://Gamepads/PS4/Keys/Dpad_Up.png"
+dest_files=[ "res://.import/Dpad_Up.png-04215eb0783b7c72629e66e23e015a7e.stex" ]
 
 [params]
 

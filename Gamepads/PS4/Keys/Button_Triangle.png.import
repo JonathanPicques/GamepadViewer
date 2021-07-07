@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Axis_Right.png-5b04ead083a6a869be4cf7b629a0885b.stex"
+path="res://.import/Button_Triangle.png-f1b475bc980b20734a2f8c89367459cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PS4_Keys/Axis_Right.png"
-dest_files=[ "res://.import/Axis_Right.png-5b04ead083a6a869be4cf7b629a0885b.stex" ]
+source_file="res://Gamepads/PS4/Keys/Button_Triangle.png"
+dest_files=[ "res://.import/Button_Triangle.png-f1b475bc980b20734a2f8c89367459cf.stex" ]
 
 [params]
 

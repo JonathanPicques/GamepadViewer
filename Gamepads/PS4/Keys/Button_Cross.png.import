@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Axis_Left.png-54a270a510e727a3042be8afb3512367.stex"
+path="res://.import/Button_Cross.png-ede83332d1b9588445fa9cc51be2a54a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PS4_Keys/Axis_Left.png"
-dest_files=[ "res://.import/Axis_Left.png-54a270a510e727a3042be8afb3512367.stex" ]
+source_file="res://Gamepads/PS4/Keys/Button_Cross.png"
+dest_files=[ "res://.import/Button_Cross.png-ede83332d1b9588445fa9cc51be2a54a.stex" ]
 
 [params]
 

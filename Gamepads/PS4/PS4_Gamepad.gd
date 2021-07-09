@@ -1,6 +1,6 @@
 extends Node2D
 
-const AXIS_MAGNITUDE := 7.0
+const AXIS_MAGNITUDE := 40.0
 
 onready var GamepadViewer: GamepadViewerNode = get_parent()
 

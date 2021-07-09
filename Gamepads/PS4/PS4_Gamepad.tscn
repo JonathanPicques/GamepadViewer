@@ -23,81 +23,73 @@
 script = ExtResource( 16 )
 
 [node name="PS4_Gamepad" type="Sprite" parent="."]
-position = Vector2( 133, 89 )
-scale = Vector2( 2, 2 )
+position = Vector2( 136, 79.25 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="Axis_Left" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 41, 41 )
+position = Vector2( 275.5, 259.5 )
+scale = Vector2( 1.05, 1.05 )
 texture = ExtResource( 18 )
 
 [node name="Axis_Right" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 81, 41 )
+position = Vector2( 533.5, 259.5 )
+scale = Vector2( 1.05, 1.05 )
 texture = ExtResource( 17 )
 
 [node name="Dpad_Up" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 23, 15.5 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 153.5, 101.5 )
 texture = ExtResource( 9 )
 
 [node name="Dpad_Down" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 23, 30.5 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 153.5, 181.5 )
 texture = ExtResource( 7 )
 
 [node name="Dpad_Left" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 15, 23 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 113.5, 141.5 )
 texture = ExtResource( 6 )
 
 [node name="Dpad_Right" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 30.5, 23 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 193.722, 141.5 )
 texture = ExtResource( 8 )
 
 [node name="Button_Cross" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 99, 31 )
+position = Vector2( 655.5, 187.5 )
 texture = ExtResource( 4 )
 
 [node name="Button_Share" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 37, 9.5 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 243.5, 55 )
 texture = ExtResource( 14 )
 
 [node name="Button_Circle" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 107, 23 )
+position = Vector2( 699.5, 141.5 )
 texture = ExtResource( 2 )
 
 [node name="Button_Square" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 91, 23 )
+position = Vector2( 607.5, 141.5 )
 texture = ExtResource( 5 )
 
 [node name="Button_Options" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 85, 9.5 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 563.5, 55.5 )
 texture = ExtResource( 15 )
 
 [node name="Button_Triangle" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 99, 14.5 )
+position = Vector2( 655.119, 94.0001 )
 texture = ExtResource( 3 )
 
 [node name="Trigger_L1" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 24, -0.5 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 159, 16 )
 texture = ExtResource( 10 )
 
 [node name="Trigger_L2" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 24, -11 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 157.5, -64 )
 texture = ExtResource( 11 )
 
 [node name="Trigger_R1" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 97, -1.5 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 655.2, 16 )
 texture = ExtResource( 12 )
 
 [node name="Trigger_R2" type="Sprite" parent="PS4_Gamepad"]
-position = Vector2( 97, -12 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 655.2, -64 )
 texture = ExtResource( 13 )

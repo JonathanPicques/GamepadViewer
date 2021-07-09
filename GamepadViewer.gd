@@ -20,7 +20,9 @@ onready var ConfigContextMenu: PopupMenu = $ConfigContextMenu
 
 # @impure
 func _ready():
-	# make the window transarent.
+	# make the window always on top.
+	OS.set_window_always_on_top(true)
+	# make the window background transarent.
 	get_tree().get_root().set_transparent_background(true)
 	# setup the initial context menu options.
 	ConfigContextMenu.add_separator("Gamepad")

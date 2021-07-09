@@ -1,7 +1,8 @@
 extends Node2D
 
-const DEVICE := 0
 const AXIS_MAGNITUDE := 7.0
+
+onready var GamepadViewer: GamepadViewerNode = get_parent()
 
 onready var Axis_Left := $PS4_Gamepad/Axis_Left
 onready var Axis_Right := $PS4_Gamepad/Axis_Right
@@ -26,22 +27,22 @@ onready var Trigger_R2 := $PS4_Gamepad/Trigger_R2
 # @progress
 func _input(_event: InputEvent):
 	# dpad
-	Dpad_Up.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_DPAD_UP)
-	Dpad_Down.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_DPAD_DOWN)
-	Dpad_Left.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_DPAD_LEFT)
-	Dpad_Right.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_DPAD_RIGHT)
+	Dpad_Up.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_DPAD_UP)
+	Dpad_Down.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_DPAD_DOWN)
+	Dpad_Left.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_DPAD_LEFT)
+	Dpad_Right.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_DPAD_RIGHT)
 	# buttons
-	Button_Cross.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_XBOX_A)
-	Button_Share.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_SELECT)
-	Button_Circle.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_XBOX_B)
-	Button_Square.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_XBOX_X)
-	Button_Options.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_START)
-	Button_Triangle.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_XBOX_Y)
+	Button_Cross.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_XBOX_A)
+	Button_Share.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_SELECT)
+	Button_Circle.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_XBOX_B)
+	Button_Square.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_XBOX_X)
+	Button_Options.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_START)
+	Button_Triangle.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_XBOX_Y)
 	# triggers
-	Trigger_L1.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_L)
-	Trigger_L2.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_L2)
-	Trigger_R1.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_R)
-	Trigger_R2.visible = GamepadViewer.is_gamepad_button_pressed(DEVICE, JOY_R2)
+	Trigger_L1.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_L)
+	Trigger_L2.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_L2)
+	Trigger_R1.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_R)
+	Trigger_R2.visible = GamepadViewer.is_gamepad_button_pressed(GamepadViewer.gamepad_device, JOY_R2)
 	# axis values
-	Axis_Left.offset = AXIS_MAGNITUDE * Vector2(GamepadViewer.get_gamepad_axis_value(DEVICE, JOY_ANALOG_LX), GamepadViewer.get_gamepad_axis_value(DEVICE, JOY_ANALOG_LY))
-	Axis_Right.offset = AXIS_MAGNITUDE * Vector2(GamepadViewer.get_gamepad_axis_value(DEVICE, JOY_ANALOG_RX), GamepadViewer.get_gamepad_axis_value(DEVICE, JOY_ANALOG_RY))
+	Axis_Left.offset = AXIS_MAGNITUDE * Vector2(GamepadViewer.get_gamepad_axis_value(GamepadViewer.gamepad_device, JOY_ANALOG_LX), GamepadViewer.get_gamepad_axis_value(GamepadViewer.gamepad_device, JOY_ANALOG_LY))
+	Axis_Right.offset = AXIS_MAGNITUDE * Vector2(GamepadViewer.get_gamepad_axis_value(GamepadViewer.gamepad_device, JOY_ANALOG_RX), GamepadViewer.get_gamepad_axis_value(GamepadViewer.gamepad_device, JOY_ANALOG_RY))

@@ -1,9 +1,12 @@
-# Godot
-.import/
-
 # Mac
 .DS_Store
 
 # Windows
 *.lnk
 *.exe
+
+# Godot
+.import/
+
+# Visual Studio
+Win32_EnableWindow

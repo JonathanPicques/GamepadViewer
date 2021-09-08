@@ -11,6 +11,8 @@ const WINDOW_DRAG_STATUS_PRESSED := 1
 const WINDOW_DRAG_STATUS_PRESSED_AND_MOVED := 2
 
 const CONTEXT_MENU_QUIT := "Quit"
+const CONTEXT_MENU_GAMEPAD_PS4 := "PS4"
+const CONTEXT_MENU_GAMEPAD_XBOX := "Xbox"
 const CONTEXT_MENU_GAMEPAD_DEVICE_1 := "Gamepad #1"
 const CONTEXT_MENU_GAMEPAD_DEVICE_2 := "Gamepad #2"
 const CONTEXT_MENU_GAMEPAD_DEVICE_3 := "Gamepad #3"
@@ -22,10 +24,14 @@ onready var ConfigContextMenu: PopupMenu = $ConfigContextMenu
 func _ready():
 	# make the window always on top.
 	OS.set_window_always_on_top(true)
+	OS.move_window_to_foreground()
 	# make the window background transarent.
 	get_tree().get_root().set_transparent_background(true)
 	# setup the initial context menu options.
 	ConfigContextMenu.add_separator("Gamepad")
+	ConfigContextMenu.add_radio_check_item(CONTEXT_MENU_GAMEPAD_PS4)
+	ConfigContextMenu.add_radio_check_item(CONTEXT_MENU_GAMEPAD_XBOX)
+	ConfigContextMenu.add_separator()
 	ConfigContextMenu.add_radio_check_item(CONTEXT_MENU_GAMEPAD_DEVICE_1)
 	ConfigContextMenu.add_radio_check_item(CONTEXT_MENU_GAMEPAD_DEVICE_2)
 	ConfigContextMenu.add_radio_check_item(CONTEXT_MENU_GAMEPAD_DEVICE_3)
@@ -33,6 +39,7 @@ func _ready():
 	ConfigContextMenu.add_separator()
 	ConfigContextMenu.add_item(CONTEXT_MENU_QUIT)
 	# setup "Gamepad #1" as the default gamepad device.
+	_enable_gamepad(CONTEXT_MENU_GAMEPAD_PS4)
 	_enable_gamepad_device(CONTEXT_MENU_GAMEPAD_DEVICE_1, 0)
 
 # @impure
@@ -61,7 +68,21 @@ func _process(_delta: float):
 ##
 
 # @impure
-func _enable_gamepad_device(menu_text: String, device: int):
+func _enable_gamepad(menu_text: String):
+	# check or uncheck in the context menu.
+	for item_index in ConfigContextMenu.get_item_count():
+		var item_id := ConfigContextMenu.get_item_id(item_index)
+		var item_text := ConfigContextMenu.get_item_text(item_index)
+		if item_text == CONTEXT_MENU_GAMEPAD_PS4 or item_text == CONTEXT_MENU_GAMEPAD_XBOX:
+			ConfigContextMenu.set_item_checked(item_id, item_text == menu_text)
+	# display the correct gamepad.
+	$PS4_Gamepad.visible = menu_text == CONTEXT_MENU_GAMEPAD_PS4
+	$PS4_Gamepad.set_process_input(menu_text == CONTEXT_MENU_GAMEPAD_PS4)
+	$Xbox_Gamepad.visible = menu_text == CONTEXT_MENU_GAMEPAD_XBOX
+	$Xbox_Gamepad.set_process_input(menu_text == CONTEXT_MENU_GAMEPAD_XBOX)
+	
+# @impure
+func _enable_gamepad_device(menu_text: String, _gamepad_device: int):
 	# check or uncheck in the context menu.
 	for item_index in ConfigContextMenu.get_item_count():
 		var item_id := ConfigContextMenu.get_item_id(item_index)
@@ -69,12 +90,14 @@ func _enable_gamepad_device(menu_text: String, device: int):
 		if item_text.begins_with("Gamepad #"):
 			ConfigContextMenu.set_item_checked(item_id, item_text == menu_text)
 	# assign gamepad device.
-	gamepad_device = device
+	gamepad_device = _gamepad_device
 
 # @impure
 func _on_config_context_menu_id_pressed(id: int):
 	match ConfigContextMenu.get_item_text(id):
 		CONTEXT_MENU_QUIT: get_tree().quit(0)
+		CONTEXT_MENU_GAMEPAD_PS4: _enable_gamepad(CONTEXT_MENU_GAMEPAD_PS4)
+		CONTEXT_MENU_GAMEPAD_XBOX: _enable_gamepad(CONTEXT_MENU_GAMEPAD_XBOX)
 		CONTEXT_MENU_GAMEPAD_DEVICE_1: _enable_gamepad_device(CONTEXT_MENU_GAMEPAD_DEVICE_1, 0)
 		CONTEXT_MENU_GAMEPAD_DEVICE_2: _enable_gamepad_device(CONTEXT_MENU_GAMEPAD_DEVICE_2, 1)
 		CONTEXT_MENU_GAMEPAD_DEVICE_3: _enable_gamepad_device(CONTEXT_MENU_GAMEPAD_DEVICE_3, 2)

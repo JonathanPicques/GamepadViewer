@@ -37,7 +37,7 @@ position = Vector2( 81, 41 )
 texture = ExtResource( 17 )
 
 [node name="Dpad_Up" type="Sprite" parent="Gamepad"]
-position = Vector2( 23, 15.5 )
+position = Vector2( 23, 15 )
 texture = ExtResource( 9 )
 
 [node name="Dpad_Down" type="Sprite" parent="Gamepad"]
@@ -85,7 +85,7 @@ position = Vector2( 23, -12 )
 texture = ExtResource( 11 )
 
 [node name="Trigger_R1" type="Sprite" parent="Gamepad"]
-position = Vector2( 99, -1.5 )
+position = Vector2( 99, -1 )
 texture = ExtResource( 12 )
 
 [node name="Trigger_R2" type="Sprite" parent="Gamepad"]

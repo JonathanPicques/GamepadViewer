@@ -23,71 +23,70 @@
 script = ExtResource( 16 )
 
 [node name="Gamepad" type="Sprite" parent="."]
-position = Vector2( 132, 64 )
+position = Vector2( 256, 144 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
-centered = false
 
 [node name="Axis_Left" type="Sprite" parent="Gamepad"]
-position = Vector2( 37, 32 )
+position = Vector2( -44, -20.5 )
 texture = ExtResource( 18 )
 
 [node name="Axis_Right" type="Sprite" parent="Gamepad"]
-position = Vector2( 101, 56 )
+position = Vector2( 20, 3.5 )
 texture = ExtResource( 17 )
 
 [node name="Dpad_Up" type="Sprite" parent="Gamepad"]
-position = Vector2( 61, 50.5 )
+position = Vector2( -20, -2 )
 texture = ExtResource( 9 )
 
 [node name="Dpad_Down" type="Sprite" parent="Gamepad"]
-position = Vector2( 61, 61.5 )
+position = Vector2( -20, 9 )
 texture = ExtResource( 7 )
 
 [node name="Dpad_Left" type="Sprite" parent="Gamepad"]
-position = Vector2( 55.5, 56 )
+position = Vector2( -25.5, 3.5 )
 texture = ExtResource( 6 )
 
 [node name="Dpad_Right" type="Sprite" parent="Gamepad"]
-position = Vector2( 66.5, 56 )
+position = Vector2( -14.5, 3.5 )
 texture = ExtResource( 8 )
 
 [node name="Button_A" type="Sprite" parent="Gamepad"]
-position = Vector2( 125.5, 40 )
+position = Vector2( 44.5, -12.5 )
 texture = ExtResource( 3 )
 
 [node name="Button_B" type="Sprite" parent="Gamepad"]
-position = Vector2( 133, 32 )
+position = Vector2( 52, -20.5 )
 texture = ExtResource( 4 )
 
 [node name="Button_X" type="Sprite" parent="Gamepad"]
-position = Vector2( 117.5, 32 )
+position = Vector2( 36.5, -20.5 )
 texture = ExtResource( 5 )
 
 [node name="Button_Y" type="Sprite" parent="Gamepad"]
-position = Vector2( 125, 24 )
+position = Vector2( 44, -28.5 )
 texture = ExtResource( 2 )
 
 [node name="Button_Select" type="Sprite" parent="Gamepad"]
-position = Vector2( 71, 31 )
+position = Vector2( -10, -21.5 )
 texture = ExtResource( 15 )
 
 [node name="Button_Start" type="Sprite" parent="Gamepad"]
-position = Vector2( 91, 31 )
+position = Vector2( 10, -21.5 )
 texture = ExtResource( 14 )
 
 [node name="Trigger_L1" type="Sprite" parent="Gamepad"]
-position = Vector2( 45, 0.5 )
+position = Vector2( -36, -52 )
 texture = ExtResource( 10 )
 
 [node name="Trigger_L2" type="Sprite" parent="Gamepad"]
-position = Vector2( 45, -10 )
+position = Vector2( -36, -62.5 )
 texture = ExtResource( 11 )
 
 [node name="Trigger_R1" type="Sprite" parent="Gamepad"]
-position = Vector2( 117, 0.5 )
+position = Vector2( 36, -52 )
 texture = ExtResource( 12 )
 
 [node name="Trigger_R2" type="Sprite" parent="Gamepad"]
-position = Vector2( 117, -10 )
+position = Vector2( 36, -62.5 )
 texture = ExtResource( 13 )
